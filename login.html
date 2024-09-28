@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.ico">
+    <style>
+        body{
+            background-image:url("../../resources/del.jpg");
+            background-size: 100%;
+            width: 100%;
+            height: 100%;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+        }
+        h1.head{
+            font-size: 20px;
+            margin: 10;
+            color: #a6603a;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            margin-left: 45%;
+            
+        }
+        h1.body{
+            text-align: center;
+        }
+        .container{
+            margin: 0px;
+            height: 1000px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .heading{
+            margin: 0px;
+            width: 100%;
+            height: 75px;
+        }
+        a.signinlink{
+            width: 100%;
+            text-decoration: none;
+            color: #004aad  ;
+        }
+        .box{
+            background-color: #f0efef;
+            color:#fff;
+            opacity: .5;
+            width: 50%;
+            height: 600px;
+            margin-left: 25%;
+            margin-top: 50px;
+        }
+        .inputstyle{
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 10%;   
+        }
+        input[type=text]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border-radius: 10rem;
+            background-color: #737373;
+        }
+        a.signinlink2{
+            width: 100%;
+            text-decoration: none;
+            color: #004aad  ;
+            margin: 30%;
+        }
+        .imgg{
+            height: 100px;
+            width: 100px;
+            margin-left: 40%;
+        }
+        input[type=button]{
+            margin-left: 36%;
+            margin-top: 30px;
+            background-color: floralwhite;
+            padding: 10px ;
+            width: 150px;
+        }
+    </style>
+    <script>
+        function validate()
+        {
+            var usn=document.f1.em.value;
+            var psw=document.f2.pa.value;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+            const isvalid=emailPattern.test(usn);
+            var user="akkshith.reddy@gmail.com";
+            var pass="admin@123";
+            if(isvalid==true)
+        {
+            if((usn==user)&&(psw==pass)){
+                const boxcol=document.getElementById("sub");
+                boxcol.style.backgroundColor="green";
+                window.alert("login successfull");
+            }
+            else{
+                window.alert("INVALID USERNAME OR PASSWORD");
+            }
+        }
+        else{
+            window.alert("email format is wrong!!");
+        }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="head">REDDY'S <br> RESTAURANT</h1>
+    </header>
+    <div class="container">
+        <div class="heading">
+            <h1 class="body">Dont have an account yet?<a href="#" class="signinlink">Sign-up</a></h1>
+        </div>
+        <div class="box">
+            <div class="inputstyle">
+                <h3>Email:</h3>
+                <form name="f1"><input type="text" placeholder="Enter Email" name="em"></form>
+                <br><br>
+                <h3>Password:</h3>
+                <form name="f2"><input type="text" placeholder="Enter password" name="pa"></form>
+                <form><input type="button" value="submit" onclick="validate()" id="sub"></form><!--need to change login in js from button to submit and use database-->
+                <h2><a hred="#" class="signinlink2">Or Login With Google</a></h2>
+                <a href="#"><img src="../../resources/Screenshot 2024-06-26 170025.png" alt="google signin" class="imgg"></a>
+            </div>
+        </div>
+    </div>
+    Sooram Akkshith Reddy 2260443
+</body>
+</html>

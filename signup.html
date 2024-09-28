@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="icon" type="image/x-icon" href="../../resources/favicon.ico">
+    <style>
+        body{
+            background-image:url("../../resources/del.jpg");
+            background-size: 100%;
+            width: 100%;
+            height: 100%;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+        }
+        h1.head{
+            font-size: 20px;
+            margin: 10;
+            color: #a6603a;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            margin-left: 45%;}
+        .container{
+            margin: 0px;
+            height: 1000px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .heading{
+            margin: 0px;
+            width: 100%;
+            height: 75px;
+        }
+        .box{
+            background-color: #f0efef;
+            color:#fff;
+            opacity: .5;
+            width: 50%;
+            height: 600px;
+            margin-left: 25%;
+            margin-top: 50px;
+        }
+        .inputstyle{
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 5%;   
+        }
+        input[type=text]{
+            width: 75%;
+            padding: 12px 20px;
+            border-radius: 10rem;
+            background-color: #737373;
+        }
+        input[type=button]{
+            margin-left: 36%;
+            margin-top: 30px;
+            background-color: floralwhite;
+            padding: 10px ;
+            width: 150px;
+        }
+        input[type=radio]
+        {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="head">REDDY'S <br> RESTAURANT</h1>
+    </header>
+    <div class="container">
+        <div class="box">
+            <div class="inputstyle">
+                <h3>Email:</h3>
+                <form><input type="text" name="emailtext" placeholder="Enter Email" ></form>
+                
+                <h3>Password:</h3>
+                <form><input type="text" name="passwordtext" placeholder="Enter password" ></form>
+                
+                <h3>Address:</h3>
+                <form><input type="text" name="addresstext" placeholder="Enter Address" ></form>
+
+                <h3>Phone Number:</h3>
+                <form><input type="text" name="numtext" placeholder="Enter Number" ></form>
+
+                <h3>City:</h3>
+                <form><input type="radio" name="cityrad">
+                <label for="cityrad">Bengaluru</label>
+                <input type="radio" name="cityrad">
+                <label for="cityrad">Hyderabad</label>
+                <input type="radio" name="cityrad">
+                <label for="cityrad">Delhi</label>
+                <input type="radio" name="cityrad">
+                <label for="cityrad">Mumbai</label>
+                <input type="radio" name="cityrad"> 
+                <label for="cityrad">Chennai</label></form>
+
+                <form><input type="button" name="submitbut" value="SUBMIT"></form>
+            </div>
+        </div>
+    </div>
+    Sooram Akkshith Reddy 2260443
+</body>
+</html>
